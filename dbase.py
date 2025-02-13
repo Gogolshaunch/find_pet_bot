@@ -34,12 +34,6 @@ cursor.execute("""
         describe TEXT,
         photo TEXT)""")
 conn.commit()
-cursor.execute(f"""
-    INSERT INTO finder (chat_id, name, phonenumber, tg_user, city, type_pet, name_pet, sex_pet, breed_pet, describe, photo)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-""", (7820363441, "Таисия Кентеладзе", "89824519131", "kent_tai", "Сургут", "Собака", "Том", 0, "Овчарка", "Нашла 15 февраля собаку в ошейнике", "d_photo/4260.jpg"))
-conn.commit()
-
 
 def new_human(person, chat_id):
     table_name = 'finder' if person.status == 1 else 'owner'
