@@ -33,7 +33,7 @@ class Person:
     photo: str = None
 
 
-TOKEN = "7820363449:AAFeXrpI9CBY1kG7EIFMYlWw4wS-ydA1x_s"
+TOKEN = ""
 dp = Dispatcher()
 
 
